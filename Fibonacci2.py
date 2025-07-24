@@ -7,12 +7,12 @@ def fibonacci(prev1, prev2):
     if count <= 19:
         next_fibonacci = prev1 + prev2
         print(next_fibonacci)
-        prev1 = prev2
-        prev2 = next_fibonacci
+        prev2 = prev1
+        prev1 = next_fibonacci
         count += 1
 
         fibonacci(prev1, prev2)
     else:
         return 
     
-fibonacci(0, 1)
+fibonacci(1, 0)
